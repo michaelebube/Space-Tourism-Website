@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Destination from './components/Destination'
+import Crew from './components/Crew'
 
 
 const App = () => {
@@ -16,7 +17,7 @@ const App = () => {
       <Routes>
                         <Route path='/' element={<Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
                          <Route path='/destination' element={<Destination isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
-                        {/* <Route path='/crew' element={<Crew />}></Route> */}
+                        <Route path='/crew' element={<Crew isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
                         {/* <Route path='/technology' element={<Technology />}></Route> */}
       </Routes>
     </div>
