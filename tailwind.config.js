@@ -3,8 +3,12 @@ export default {
   content: ["./index.html","./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      
+      
       screens: {
-        'xs': '360px'
+        'xs': '360px',
+        'h-sm': { 'raw': '(min-height: 640px)' },   
+        'h-md': { 'raw': '(min-height: 768px)' },  
       },
         colors: {
       primaryColor: '#0B0D17',
