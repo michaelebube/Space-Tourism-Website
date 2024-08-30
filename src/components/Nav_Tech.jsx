@@ -6,8 +6,8 @@ const Nav_Tech = ({ selectedResource, handleClick }) => {
 
   return (
     <div className='flex items-center'>
-      <div className='flex mt-6 xl:mt-3  '>
-        <ul className='flex flex-col space-y-11 '>
+      <div className='flex  mt-6 xl:mt-3  '>
+        <ul className='flex lg:flex-col sm:flex-row lg:space-y-10 space-x-7 sm:space-x-6 md:space-x-10 lg:space-x-0 '>
           <li>
             <NavLink
               to="/technology"
@@ -15,7 +15,7 @@ const Nav_Tech = ({ selectedResource, handleClick }) => {
               onClick={() => handleClick('Launch')}
             >
               <div
-                className={` xs:w-[10px] xs:h-[10px] lg:w-[200px] lg:h-[200px]  p-7 xl:p-8 rounded-full text-xl xl:text-2xl ${
+                className={` xs:w-[10px] xs:h-[10px] lg:w-[200px] lg:h-[200px] p-5 sm:p-6   md:p-7 xl:p-8 rounded-full text-xl xl:text-2xl ${
                   isSelected('LAUNCH VEHICLE') ? 'bg-white text-primaryColor bg-opacity-100 z-10 ' : ''
                 } transition-all duration-300 ease-in-out   flex items-center justify-center
                 text-white border  border-white/30
@@ -30,7 +30,7 @@ const Nav_Tech = ({ selectedResource, handleClick }) => {
               onClick={() => handleClick('SpacePort')}
             >
               <div
-                className={` xs:w-[10px] xs:h-[10px] lg:w-10 lg:h-10 p-7 xl:p-8   rounded-full text-xl xl:text-2xl ${
+                className={` xs:w-[10px] xs:h-[10px] lg:w-10 lg:h-10 p-5 sm:p-6 md:p-7 xl:p-8   rounded-full text-xl xl:text-2xl ${
                   isSelected('SPACEPORT')
                     ? 'bg-white text-primaryColor bg-opacity-100 z-10'
                     : ' '
@@ -47,7 +47,7 @@ const Nav_Tech = ({ selectedResource, handleClick }) => {
               onClick={() => handleClick('SpaceCapsule')}
             >
               <div
-                className={`xs:w-[10px] xs:h-[10px] lg:w-10 lg:h-10 p-7 xl:p-8   rounded-full text-xl xl:text-2xl ${
+                className={`xs:w-[10px] xs:h-[10px] lg:w-10 lg:h-10 p-5 sm:p-6 md:p-7 xl:p-8   rounded-full text-xl xl:text-2xl ${
                   isSelected('SPACE CAPSULE') ? 'bg-white text-primaryColor bg-opacity-100 z-10' : ''
                 } transition-all duration-300 ease-in-out  flex items-center justify-center border  border-white/30
                 hover:border-white hover:scale-105

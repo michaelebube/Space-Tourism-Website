@@ -19,7 +19,7 @@ const App = () => {
                         <Route path='/' element={<Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
                          <Route path='/destination' element={<Destination isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
                         <Route path='/crew' element={<Crew isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
-                        <Route path='/technology' element={<Technology />}></Route>
+                        <Route path='/technology' element={<Technology isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
       </Routes>
     </div>
   )

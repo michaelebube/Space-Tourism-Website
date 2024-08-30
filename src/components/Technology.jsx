@@ -7,6 +7,7 @@ import Navbar_Home from './Navbar_Home'
 import Nav_Tech from './Nav_Tech'
 
 
+
 const Technology = ({isSidebarOpen, toggleSidebar}) => {
     const [selectedResource, setSelectedResource] = useState(TechData['Launch'])
 
@@ -19,58 +20,65 @@ const Technology = ({isSidebarOpen, toggleSidebar}) => {
          <div className="relative w-screen h-screen">
 
         {/* Mobile Background and Navbar */}
-    <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat xs:block sm:hidden"
-        style={{ backgroundImage: `url(${BgMobile})` }}
+     <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden xs:block"
+        style={{ backgroundImage: `url(${BgTablet})` }}
       >
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
-         <div className='flex flex-col -mt-[40px]  '>
-            <div className='font-barlow text-[28px] text-center  -ml-4 text-white'><span className='text-white/20 mr-2 xl:mr-4'>02</span>
+           <div className='flex flex-col -mt-[30px] mx-auto  '>
+            <div className='font-barlow text-[28px] text-center  text-white'><span className='text-white/20 mr-2 xl:mr-4'>03</span>
                 <span className='lg:tracking-wider'>SPACE LAUNCH 101</span></div>
 
-            <div className='flex-col mt-[90px] md:mt-[60px] ml-[28%] md:ml-[23%]      '>
+            <div className='flex-col mt-[0px]  md:mt-[40px]       '>
              
+             <div className='relative  flex justify-center items-center  '>
+                <div className='relative'>
+                    <img src={selectedResource.imgMobile }alt="" className=' md:mt-[12px] xl:-mt-[65px] w-screen h-[360px] sm:w-screen md:max-h-[220px]  sm:max-h-[200px] ' />
+                    
+                </div>
+              
+              </div>
 
-              <div className='space-y-[2px] flex-col  items-center '>
+              <div className=' '>
 
                
-                <h1 className='-mt-[34px] xl:mt-1 text-[25px] text-secColor/70 font-bellefair -ml-[120px]  text-center   '>
+               <div className='w-[350px] sm:w-[500px] xl:w-[500px] flex-col justify-center items-center mx-auto   '>
+                
+                <div className='flex justify-center items-center'>
+                    <Nav_Tech handleClick={handleClick} selectedResource={selectedResource} />
+                </div>
+                <h1 className='pt-6 sm:pt-[10px] md:pt-4 text-secColor/70  text-xl sm:text-[19px] md:text-xl xl:text-[32px] text-center'>THE TERMINOLOGY...</h1>
+                <h1 className='mt-1 sm:mt-0  text-[30px] xl:text-[55px] text-white font-bellefair text-center   '>
                     {selectedResource.title}
                 </h1>
 
-                <h1 className='text-white  text-[32px] font-bellefair text-center -ml-[120px] '>
-                    {selectedResource.name}
+                <h1 className='mt-1 sm:mt-0 text-secColor text-[17px] sm:text-[17px]  font-bellefair text-center'>
+                    {selectedResource.content}
                 </h1>
-                <div className='flex -ml-[120px]  justify-center items-center pt-6'>
-                     <p className='  w-[360px] xl:w-[470px] text-lg font-barlow text-center  text-secColor/70  '>
-                    {selectedResource.profile}
-                </p>
-                </div>
+               </div>
                
 
                
             </div>
             
-            <div className='relative mx-auto   '>
-                <div className='relative'>
-                    <img src={selectedResource.img} alt="" className=' mt-[85px]  w-[360px] h-[350px] -ml-[19%]'/>
-                    <div className="absolute inset-0 top-[65%] bg-gradient-to-b from-transparent to-primaryColor -ml-[19%]"></div>
-                </div>
-              
-              </div>
+            
              
             </div>
         </div>
 
-         {/* Overlay */}
+        {/* Overlay */}
     {isSidebarOpen && (
       <div
         className="fixed inset-0 z-0 bg-primaryColor opacity-100 transition-opacity duration-300 ease-in-out"
         onClick={toggleSidebar} // Close sidebar when overlay is clicked
       ></div>
     )}
+      
       </div>
+
+
+         
 
 
  
@@ -83,35 +91,37 @@ const Technology = ({isSidebarOpen, toggleSidebar}) => {
       >
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
-         <div className='flex flex-col -mt-5  '>
+         <div className='flex flex-col -mt-7  '>
             <div className='font-barlow sm:text-2xl  md:text-[26px] sm:ml-10 text-white'><span className='text-white/20 mr-2 xl:mr-4'>03</span>
                 <span className='lg:tracking-wider'>SPACE LAUNCH 101</span></div>
 
-            <div className='flex-col sm:mt-[90px] md:mt-[40px]       '>
+            <div className='flex-col sm:mt-[60px] md:mt-[40px]       '>
              
-             <div className='relative  md:pl-[6px] '>
+             <div className='relative  flex justify-center items-center  '>
                 <div className='relative'>
-                    <img src={selectedResource.imgTablet}alt="" className=' my-[50px] xl:-mt-[65px]  md:w-screen md:h-[250px] sm:w-[300px] sm:h-[240px] ' />
+                    <img src={selectedResource.imgTablet}alt="" className=' md:mt-[12px] xl:-mt-[65px]  sm:w-screen md:max-h-[220px]  sm:max-h-[200px] ' />
                     
                 </div>
               
               </div>
 
-              <div className='space-y-[1px] flex-col  items-center '>
+              <div className=' '>
 
                
-                <h1 className='-mt-[34px] xl:mt-1 text-[25px] text-secColor/70 font-bellefair -ml-[220px]  text-center   '>
+               <div className='w-[500px] xl:w-[500px] flex-col justify-center items-center mx-auto   '>
+                
+                <div className='flex justify-center items-center'>
+                    <Nav_Tech handleClick={handleClick} selectedResource={selectedResource} />
+                </div>
+                <h1 className='sm:pt-[10px] md:pt-4 text-secColor/70 sm:text-[19px] md:text-xl xl:text-[32px] text-center'>THE TERMINOLOGY...</h1>
+                <h1 className='md:mt-2 xl:mt-1 text-[30px] xl:text-[55px] text-white font-bellefair text-center   '>
                     {selectedResource.title}
                 </h1>
 
-                <h1 className='text-white  text-[40px] font-bellefair text-center -ml-[220px]'>
-                    {selectedResource.name}
+                <h1 className='text-secColor sm:text-[17px]  font-bellefair text-center'>
+                    {selectedResource.content}
                 </h1>
-                <div className='flex -ml-[220px] justify-center items-center'>
-                     <p className='  w-[460px] xl:w-[470px] text-lg ml- font-barlow text-center  text-secColor/70  '>
-                    {selectedResource.profile}
-                </p>
-                </div>
+               </div>
                
 
                

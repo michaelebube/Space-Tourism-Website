@@ -28,32 +28,32 @@ const Destination = ({isSidebarOpen, toggleSidebar}) => {
   >
     <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
-    <div className="font-barlow text-xl sm:text-3xl text-white   sm:-mt-[30px] sm:pl-[28%] pl-[25%] -mt-[30px]">
+    <div className="font-barlow text-2xl sm:text-3xl text-white   sm:-mt-[30px] sm:pl-[28%] pl-[20%] -mt-[30px]">
       <span className="text-white/30 mr-4 sm:mr-6">01</span>
       <span className="lg:tracking-wider">PICK YOUR DESTINATION</span>
     </div>
 
-    <div className="flex flex-col pl-[25%] gap-2 mt-7 sm:mt-[22px] transition-transform duration-500 ease-in-out transform translate-x-5">
+    <div className="flex flex-col mx-auto justify-center items-center gap-2 mt-7 sm:mt-[22px] ">
       <div>
-        <img src={selectedResource.img} alt="" className="w-[200px] h-[200px] sm:w-[230px] sm:h-[230px] xl:w-[400px] xl:h-[400px] -ml-4 sm:ml-8" />
+        <img src={selectedResource.img} alt="" className="w-[200px] h-[200px] sm:w-[230px] sm:h-[230px] xl:w-[400px] xl:h-[400px] mx-auto sm:ml-8" />
       </div>
 
-      <div className="flex flex-col transition-transform duration-500 ease-in-out transform translate-x-5 -ml-[15%] sm:-ml-[24%] mt-2 sm:mt-1">
+      <div className="flex flex-col items-center justify-center mx-auto  sm:-ml-[24%] mt-2 sm:mt-1">
         <div className="">
           <Navbar_Dest handleClick={handleClick} selectedResource={selectedResource} />
         </div>
-        <div className="w-[400px] flex justify-center  -ml-[90px] sm:ml-[60px]">
+        <div className="w-[400px] flex justify-center  mx-auto sm:ml-[60px]">
           <h1 className="text-[50px] sm:text-[80px] sm:-mt-[50px] mt-2  text-white font-bellefair text-center">
             {selectedResource.title}
           </h1>
         </div>
 
-        <p className="lg:pl-24 w-[320px] sm:w-[350px] md:w-[400px] xl:w-[650px] text-[18px] sm:text-[17px] md:text-[16px] xl:text-[20px] sm:-mt-[22px] -ml-[12%] sm:ml-[14%] font-barlow text-secColor/50 xl:pl-[250px] md:ml-[4%] text-center">
+        <p className="lg:pl-24 w-[320px] sm:w-[350px] md:w-[400px] xl:w-[650px] text-[18px] sm:text-[17px] md:text-[16px] xl:text-[20px] sm:-mt-[22px] mx-auto sm:ml-[14%] font-barlow text-secColor/50 xl:pl-[250px] md:ml-[4%] text-center">
           {selectedResource.content}
         </p>
-        <div className="border-b-[1px] text-white w-[300px] sm:w-[350px] lg:w-[300px] md:w-[390px] -ml-9 md:ml-8 sm:ml-20 sm:mt-3 lg:ml-24 mt-6 md:mt-4 lg:mt-8"></div>
+        <div className="border-b-[1px] text-white w-[300px] sm:w-[350px] lg:w-[300px] md:w-[390px]  md:ml-8 sm:ml-20 sm:mt-3 lg:ml-24 mt-6 md:mt-4 lg:mt-8"></div>
 
-        <div className=" sm:flex gap-[68px]  mt-6 sm:mt-[12px] pl-12 sm:pl-32 lg:pl-24 xl:pl-[250px] md:pl-28">
+        <div className=" sm:flex gap-[68px]  mt-6 sm:mt-[12px]mx-auto sm:pl-32 lg:pl-24 xl:pl-[250px] md:pl-28">
           <div>
             <h4 className="text-secColor/50 text-[22px] lg:text-[12px] sm:text-[13px] md:text-[10px] xl:text-sm mb-1 sm:-mb-1">AVG. DISTANCE</h4>
             <h3 className="text-white ml-3 sm:ml-1 sm:text-lg text-2xl md:text-[16px] lg:text-xl xl:text-2xl">{selectedResource.avgDistance}</h3>
