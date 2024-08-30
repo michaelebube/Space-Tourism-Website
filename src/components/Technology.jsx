@@ -84,11 +84,18 @@ const Technology = ({isSidebarOpen, toggleSidebar}) => {
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
          <div className='flex flex-col -mt-5  '>
-            <div className='font-barlow sm:text-2xl  md:text-[26px] sm:ml-10 text-white'><span className='text-white/20 mr-2 xl:mr-4'>02</span>
-                <span className='lg:tracking-wider'>MEET YOUR CREW</span></div>
+            <div className='font-barlow sm:text-2xl  md:text-[26px] sm:ml-10 text-white'><span className='text-white/20 mr-2 xl:mr-4'>03</span>
+                <span className='lg:tracking-wider'>SPACE LAUNCH 101</span></div>
 
-            <div className='flex-col sm:mt-[90px] md:mt-[60px] sm:ml-[28%] md:ml-[23%]      '>
+            <div className='flex-col sm:mt-[90px] md:mt-[40px]       '>
              
+             <div className='relative  md:pl-[6px] '>
+                <div className='relative'>
+                    <img src={selectedResource.imgTablet}alt="" className=' my-[50px] xl:-mt-[65px]  md:w-screen md:h-[250px] sm:w-[300px] sm:h-[240px] ' />
+                    
+                </div>
+              
+              </div>
 
               <div className='space-y-[1px] flex-col  items-center '>
 
@@ -110,13 +117,7 @@ const Technology = ({isSidebarOpen, toggleSidebar}) => {
                
             </div>
             
-            <div className='relative mx-auto md:pl-[6px] '>
-                <div className='relative'>
-                    <img src={selectedResource.img} alt="" className=' my-[50px] xl:-mt-[65px]  md:w-[325px] md:h-[250px] sm:w-[300px] sm:h-[240px] sm:ml-[0.15em] md:ml-[8%]' />
-                    <div className="absolute inset-0 top-[65%] bg-gradient-to-b from-transparent to-primaryColor"></div>
-                </div>
-              
-              </div>
+            
              
             </div>
         </div>
