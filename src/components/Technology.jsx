@@ -1,23 +1,22 @@
 import React, {useState} from 'react'
-import BgMobile from '../assets/crew/background-crew-mobile.jpg'
-import BgTablet from '../assets/crew/background-crew-tablet.jpg'
-import BgDesk from '../assets/crew/background-crew-desktop.jpg'
-import { CrewData } from '../CrewData'
+import TechData from '../TechData'
+import BgMobile from '../assets/technology/background-technology-mobile.jpg'
+import BgTablet from '../assets/technology/background-technology-tablet.jpg'
+import BgDesk from '../assets/technology/background-technology-desktop.jpg'
 import Navbar_Home from './Navbar_Home'
+import Nav_Tech from './Nav_Tech'
 
-import Nav_Crew from './Nav_Crew'
 
-const Crew = ({isSidebarOpen, toggleSidebar}) => {
-
-     const [selectedResource, setSelectedResource] = useState(CrewData['Crew1'])
+const Technology = ({isSidebarOpen, toggleSidebar}) => {
+    const [selectedResource, setSelectedResource] = useState(TechData['Launch'])
 
     const handleClick = (resourceKey) => {
-        setSelectedResource(CrewData[resourceKey])
+        setSelectedResource(TechData[resourceKey])
     }
 
   return (
-   <>
-    <div className="relative w-screen h-screen">
+    <>
+         <div className="relative w-screen h-screen">
 
         {/* Mobile Background and Navbar */}
     <div
@@ -28,7 +27,7 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
 
          <div className='flex flex-col -mt-[40px]  '>
             <div className='font-barlow text-[28px] text-center  -ml-4 text-white'><span className='text-white/20 mr-2 xl:mr-4'>02</span>
-                <span className='lg:tracking-wider'>MEET YOUR CREW</span></div>
+                <span className='lg:tracking-wider'>SPACE LAUNCH 101</span></div>
 
             <div className='flex-col mt-[90px] md:mt-[60px] ml-[28%] md:ml-[23%]      '>
              
@@ -50,9 +49,7 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
                 </div>
                
 
-                <div className=' pt-8 flex justify-center -ml-[120px] ' >
-                    <Nav_Crew handleClick={handleClick} selectedResource={selectedResource} />
-                </div>
+               
             </div>
             
             <div className='relative mx-auto   '>
@@ -110,9 +107,7 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
                 </div>
                
 
-                <div className=' pt-6 flex justify-center -ml-[240px] ' >
-                    <Nav_Crew handleClick={handleClick} selectedResource={selectedResource} />
-                </div>
+               
             </div>
             
             <div className='relative mx-auto md:pl-[6px] '>
@@ -136,34 +131,37 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
          <div className='flex flex-col mt-[2px] xl:-mt-4   xl:pl-[180px] lg:pl-[14%] '>
-            <div className='font-barlow lg:text-[26px] xl:text-[34px] text-white'><span className='text-white/20 mr-2 xl:mr-4'>02</span>
-                <span className='lg:tracking-wider'>MEET YOUR CREW</span></div>
+            <div className='font-barlow lg:text-[26px] xl:text-[34px] text-white'><span className='text-white/20 mr-2 xl:mr-4'>03</span>
+                <span className='lg:tracking-wider'>SPACE LAUNCH 101</span></div>
 
-            <div className='flex lg:gap-20  xl:gap-[280px]  mt-[90px]  xl:mt-[100px]   '>
+         
+            <div className='flex   xl:gap-[280px]  mt-[140px]  xl:mt-[125px]   '>
              
 
-              <div className='flex flex-col space-y-[1px] '>
+              <div className='flex gap-12 xl:gap-14  space-y-[1px] transition-all duration-1000 ease-in-out '>
+                <div>
+                    <Nav_Tech selectedResource={selectedResource} handleClick={handleClick} />
+                </div>
 
-               
-                <h1 className='mt-2 xl:mt-1 lg:text-[24px] xl:text-[26px] text-secColor/70 font-bellefair   '>
+               <div className='w-[400px] xl:w-[500px]   '>
+                <h1 className='pt-4 text-secColor/70 text-2xl xl:text-[32px]'>THE TERMINOLOGY...</h1>
+                <h1 className='mt-2 xl:mt-1 lg:text-[40px] xl:text-[55px] text-white font-bellefair   '>
                     {selectedResource.title}
                 </h1>
 
-                <h1 className='text-white  text-[36px] font-bellefair'>
-                    {selectedResource.name}
+                <h1 className='text-secColor  text-lg xl:text-xl font-bellefair'>
+                    {selectedResource.content}
                 </h1>
-                <p className='  w-[380px] xl:w-[470px] text-[17px] xl:text-[21px] xl:-mt-5 font-barlow text-secColor/70  '>
-                    {selectedResource.profile}
-                </p>
+               </div>
+                
+                
 
-                <div className='lg:pt-[170px] xl:pt-[160px] ' >
-                    <Nav_Crew handleClick={handleClick} selectedResource={selectedResource} />
-                </div>
+               
             </div>
             
-            <div className='relative'>
-                <img src={selectedResource.img} alt="" className='-mt-14 xl:-mt-[65px]  w-[400px] h-[450px] xl:w-[450px] xl:h-[480px]' />
-                <div className="absolute inset-0 top-[70%] bg-gradient-to-b from-transparent to-primaryColor/90"></div>
+            <div className='absolute right-0  '>
+                <img src={selectedResource.imgPortrait} alt="" className=' rounded-sm -mt-14  xl:-mt-[75px]  w-[400px] h-[400px] xl:w-[550px] xl:h-[450px]' />
+                
               </div>
              
             </div>
@@ -172,8 +170,9 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
 
        
     </div>
-   </>
+    
+    </>
   )
 }
 
-export default Crew
+export default Technology
