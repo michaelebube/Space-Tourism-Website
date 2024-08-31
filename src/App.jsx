@@ -6,6 +6,7 @@ import Crew from './components/Crew'
 import Technology from './components/Technology'
 
 
+
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -13,14 +14,15 @@ const App = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
   return (
-    <div className='overflow-x-hidden '>
-     
+    <div className='overflow-x-hidden transition-all ease-in-out duration-700 '>
+    
       <Routes>
                         <Route path='/' element={<Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
                          <Route path='/destination' element={<Destination isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
                         <Route path='/crew' element={<Crew isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
                         <Route path='/technology' element={<Technology isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
       </Routes>
+    
     </div>
   )
 }
