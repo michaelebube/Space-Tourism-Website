@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 const Navbar_Dest = ({ selectedResource, handleClick }) => {
   return (
     <>
-      <div className=' xs:flex sm:pl-28 md:pl-24 xl:pl-[250px] sm:h-[80px] md:h-[90px] lg:h-[20px] sm:w-[700px] md:w-[750px] lg:w-[100px] font-barlow font-semibold bg-transparent xs:text-lg sm:text-[20px] lg:text-lg xl:text-[26px] text-secColor/50'>
+      <div className=' xs:flex  justify-center lg:ml-1 xl:ml-2 md:justify-normal  md:pl-24 xl:pl-[250px] sm:h-[80px] md:h-[90px] lg:h-[20px] sm:w-[700px] md:w-[750px] lg:w-[100px] font-barlow font-semibold bg-transparent xs:text-lg sm:text-[20px] lg:text-lg xl:text-[26px] text-secColor/50'>
         <ul className='flex space-x-5 sm:space-x-10 lg:space-x-5 xl:space-x-8'>
           <li>
             <NavLink

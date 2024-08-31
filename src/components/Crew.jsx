@@ -21,7 +21,7 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
 
         {/* Mobile Background and Navbar */}
     <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat xs:block sm:hidden"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat block sm:hidden"
         style={{ backgroundImage: `url(${BgMobile})` }}
       >
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
@@ -58,7 +58,7 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
             <div className='relative mx-auto   '>
                 <div className='relative'>
                     <img src={selectedResource.img} alt="" className=' mt-[85px]  w-[360px] h-[350px] -ml-[19%]'/>
-                    <div className="absolute inset-0 top-[65%] bg-gradient-to-b from-transparent to-primaryColor -ml-[19%]"></div>
+                    <div className="absolute inset-0 top-[55%] bg-gradient-to-b from-transparent to-primaryColor -ml-[19%]"></div>
                 </div>
               
               </div>
@@ -118,7 +118,7 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
             <div className='relative mx-auto md:pl-[6px] '>
                 <div className='relative'>
                     <img src={selectedResource.img} alt="" className=' my-[50px] xl:-mt-[65px]  md:w-[325px] md:h-[250px] sm:w-[300px] sm:h-[240px] sm:ml-[0.15em] md:ml-[8%]' />
-                    <div className="absolute inset-0 top-[65%] bg-gradient-to-b from-transparent to-primaryColor"></div>
+                    <div className="absolute inset-0 top-[55%] bg-gradient-to-b from-transparent to-primaryColor"></div>
                 </div>
               
               </div>
@@ -163,7 +163,7 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
             
             <div className='relative'>
                 <img src={selectedResource.img} alt="" className='-mt-14 xl:-mt-[65px]  w-[400px] h-[450px] xl:w-[450px] xl:h-[480px]' />
-                <div className="absolute inset-0 top-[70%] bg-gradient-to-b from-transparent to-primaryColor/90"></div>
+                <div className="absolute inset-0 rounded-sm top-[75%] bg-gradient-to-b from-transparent to-primaryColor/90"></div>
               </div>
              
             </div>

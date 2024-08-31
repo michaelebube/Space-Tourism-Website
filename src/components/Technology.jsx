@@ -21,7 +21,7 @@ const Technology = ({isSidebarOpen, toggleSidebar}) => {
 
         {/* Mobile Background and Navbar */}
      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden xs:block"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat  sm:hidden block"
         style={{ backgroundImage: `url(${BgTablet})` }}
       >
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
@@ -86,7 +86,7 @@ const Technology = ({isSidebarOpen, toggleSidebar}) => {
 
       {/* Tablet Background and Navbar */}
     <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden  lg:hidden sm:block"
         style={{ backgroundImage: `url(${BgTablet})` }}
       >
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />

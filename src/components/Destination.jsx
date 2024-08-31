@@ -23,7 +23,7 @@ const Destination = ({isSidebarOpen, toggleSidebar}) => {
    <div className="relative w-screen h-screen">
 
      <div
-    className="absolute inset-0 bg-cover bg-center bg-no-repeat xs:block md:hidden"
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat block  md:hidden xl:hidden "
     style={{ backgroundImage: `url(${BgMobile})` }}
   >
     <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
@@ -35,33 +35,33 @@ const Destination = ({isSidebarOpen, toggleSidebar}) => {
 
     <div className="flex flex-col mx-auto justify-center items-center gap-2 mt-7 sm:mt-[22px] ">
       <div>
-        <img src={selectedResource.img} alt="" className="w-[200px] h-[200px] sm:w-[230px] sm:h-[230px] xl:w-[400px] xl:h-[400px] mx-auto sm:ml-8" />
+        <img src={selectedResource.img} alt="" className="w-[200px] h-[200px] sm:w-[230px] sm:h-[230px] xl:w-[400px] xl:h-[400px] mx-auto " />
       </div>
 
-      <div className="flex flex-col items-center justify-center mx-auto  sm:-ml-[24%] mt-2 sm:mt-1">
+      <div className="flex flex-col items-center justify-center mx-auto    mt-2 sm:mt-1">
         <div className="">
           <Navbar_Dest handleClick={handleClick} selectedResource={selectedResource} />
         </div>
-        <div className="w-[400px] flex justify-center  mx-auto sm:ml-[60px]">
+        <div className="w-[400px] flex justify-center  mx-auto ">
           <h1 className="text-[50px] sm:text-[80px] sm:-mt-[50px] mt-2  text-white font-bellefair text-center">
             {selectedResource.title}
           </h1>
         </div>
 
-        <p className="lg:pl-24 w-[320px] sm:w-[350px] md:w-[400px] xl:w-[650px] text-[18px] sm:text-[17px] md:text-[16px] xl:text-[20px] sm:-mt-[22px] mx-auto sm:ml-[14%] font-barlow text-secColor/50 xl:pl-[250px] md:ml-[4%] text-center">
+        <p className="lg:pl-24 w-[320px] sm:w-[350px] md:w-[400px] xl:w-[650px] text-[18px] sm:text-[17px] md:text-[16px] xl:text-[20px] sm:-mt-[22px]  mx-auto font-barlow text-secColor/50 xl:pl-[250px] md:ml-[4%] text-center">
           {selectedResource.content}
         </p>
-        <div className="border-b-[1px] text-white w-[300px] sm:w-[350px] lg:w-[300px] md:w-[390px]  md:ml-8 sm:ml-20 sm:mt-3 lg:ml-24 mt-6 md:mt-4 lg:mt-8"></div>
+        <div className="border-b-[1px] text-white w-[300px] sm:w-[350px] lg:w-[300px] md:w-[390px]  md:ml-8 sm:mt-3 lg:ml-24 mt-6 md:mt-4 lg:mt-8"></div>
 
-        <div className=" sm:flex gap-[68px]  mt-6 sm:mt-[12px]mx-auto sm:pl-32 lg:pl-24 xl:pl-[250px] md:pl-28">
+        <div className=" sm:flex gap-[68px]   sm:mt-[10px] mx-auto  lg:pl-24 xl:pl-[250px] md:pl-28">
           <div>
-            <h4 className="text-secColor/50 text-[22px] lg:text-[12px] sm:text-[13px] md:text-[10px] xl:text-sm mb-1 sm:-mb-1">AVG. DISTANCE</h4>
+            <h4 className="text-secColor/50 text-[22px] lg:text-[12px]  sm:text-[13px] md:text-[10px] xl:text-sm mb-1 sm:-mb-1">AVG. DISTANCE</h4>
             <h3 className="text-white ml-3 sm:ml-1 sm:text-lg text-2xl md:text-[16px] lg:text-xl xl:text-2xl">{selectedResource.avgDistance}</h3>
           </div>
 
           <div>
-            <h4 className="text-secColor/50 mt-6 sm:mt-0 text-xl sm:text-[13px] lg:text-[12px] md:text-[10px] xl:text-sm mb-1 sm:-mb-1">EST. TRAVEL TIME</h4>
-            <h3 className="text-white text-2xl sm:text-lg ml-7 sm:ml-1  md:text-[16px] lg:text-xl xl:text-2xl">{selectedResource.travelTime}</h3>
+            <h4 className="text-secColor/50 mt-6 sm:mt-0 text-[20px] sm:text-[13px] lg:text-[12px] md:text-[10px] xl:text-sm mb-1 sm:-mb-1">EST. TRAVEL TIME</h4>
+            <h3 className="text-white text-2xl sm:text-lg ml-7 sm:ml-2  md:text-[16px] lg:text-xl xl:text-2xl">{selectedResource.travelTime}</h3>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ const Destination = ({isSidebarOpen, toggleSidebar}) => {
     {isSidebarOpen && (
       <div
         className="fixed inset-0 z-0 bg-primaryColor opacity-100 transition-opacity duration-300 ease-in-out"
-        onClick={toggleSidebar} // Close sidebar when overlay is clicked
+        onClick={toggleSidebar} 
       ></div>
     )}
   </div>
@@ -82,7 +82,7 @@ const Destination = ({isSidebarOpen, toggleSidebar}) => {
 
       {/* Tablet Background and Navbar */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden  md:block lg:hidden"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden  md:block lg:hidden overflow-y-hidden "
         style={{ backgroundImage: `url(${BgTablet})` }}
       >
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
@@ -112,7 +112,7 @@ const Destination = ({isSidebarOpen, toggleSidebar}) => {
                 </p>
                 <div className='border-b-[1px] text-white lg:w-[300px] md:w-[390px] md:ml-8  lg:ml-24 md:mt-4 lg:mt-8'></div>
 
-                <div className='flex gap-[68px] mt-5 xl:mt-4 lg:pl-24 xl:pl-[250px] md:pl-28 '>
+                <div className='flex gap-[68px] mt-4  lg:pl-24 xl:pl-[250px] md:pl-28 '>
                     <div>
                         <h4 className='text-secColor/50 lg:text-[12px] md:text-[10px] xl:text-sm'>AVG. DISTANCE</h4>
                         <h3 className='text-white md:text-[16px] lg:text-xl xl:text-2xl mt-1'>{selectedResource.avgDistance}</h3>
@@ -138,7 +138,7 @@ const Destination = ({isSidebarOpen, toggleSidebar}) => {
     
      {/* Desktop Background and Navbar */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block "
         style={{ backgroundImage: `url(${BgDesk})` }}
       >
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />

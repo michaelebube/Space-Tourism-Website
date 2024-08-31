@@ -46,7 +46,7 @@ const Home = ({isSidebarOpen, toggleSidebar}) => {
 
       {/* Tablet Background and Navbar */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block md:block"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden xl:hidden lg:hidden md:block"
         style={{ backgroundImage: `url(${BgTablet})` }}
       >
         <Navbar_Home />
