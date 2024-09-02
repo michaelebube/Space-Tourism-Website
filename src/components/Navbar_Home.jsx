@@ -28,7 +28,7 @@ const Navbar_Home = ({isSidebarOpen, toggleSidebar}) => {
         </div>
 
         {/* Navbar Links for larger screens */}
-        <div className='hidden sm:flex sm:pl-28 md:pl-24 lg:pl-32 p-4 xl:pl-[120px] items-center sm:h-[80px] md:h-[90px] lg:h-[65px] sm:w-[700px] md:w-[750px] lg:w-[750px] font-barlow font-semibold bg-white bg-opacity-10 sm:text-[17px] md:text-[22px] lg:text-[22px] text-white'>
+        <div className='hidden sm:flex sm:pl-28 md:pl-24 lg:pl-32 p-4 xl:pl-[120px] items-center sm:h-[80px] md:h-[90px] lg:h-[65px] sm:w-[700px] md:w-[750px] lg:w-[750px] font-barlow font-semibold bg-gray-950 sm:text-[17px] md:text-[22px] lg:text-[22px] text-white'>
           <ul className='flex sm:space-x-10 lg:space-x-12 xl:space-x-12'>
             <li>
               <NavLink
