@@ -17,7 +17,7 @@ const Technology = ({isSidebarOpen, toggleSidebar}) => {
 
   return (
     <>
-         <div className="relative w-screen h-screen">
+         <div className="relative w-screen h-[935px] sm:h-screen">
 
         {/* Mobile Background and Navbar */}
      <div

@@ -15,19 +15,17 @@ const Home = ({isSidebarOpen, toggleSidebar}) => {
         style={{ backgroundImage: `url(${BgMobile})` }}
       >
         <Navbar_Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar}/>
-        <div className='flex flex-col items-center justify-center h-sm:-mt-6  h-md:mt-[8px]  pl-9  sm:py-10 relative'>
+        <div className='flex flex-col items-center justify-center pl-[20%] h-sm:-mt-6  h-md:mt-[8px]    sm:py-10 relative'>
             <div>
-                <h3 className='text-secColor text-[16px] font-bellefair md:ml-2 '>SO, YOU WANT TO TRAVEL TO</h3>
-                <h1 className='-ml-4 text-[90px] text-white -mt-2 tracking-wider'>SPACE</h1>
-                <h3 className='w-[290px] text-secColor   text-[16px] leading-loose font-barlow -ml-6 tracking-wide '>Let's face it; if you want to go to space, you might <span className='ml-[2px]'> as well genuinely go to outer space and not hover
-                    </span>  <span className='ml-2'>kind of on the edge of it. Well sit back, and relax 
-                    </span> <span className='ml-4'>
-                        because we'll give you a truly out of this world 
-                        </span> <span className='ml-[38%]'>experience!</span> </h3>
+                <h3 className='text-secColor text-sm font-bellefair ml-1 md:ml-2 '>SO, YOU WANT TO TRAVEL TO</h3>
+                <h1 className='-ml-4 text-[80px] text-white -mt-2 tracking-wider'>SPACE</h1>
+                <h3 className='w-[290px] text-secColor   text-sm leading-loose font-barlow -ml-[14%] tracking-wide text-center  '>Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover
+                   kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world 
+                         experience! </h3>
             </div>
 
            <Link to ="/destination">
-                <div className='relative flex items-center justify-center border rounded-full h-md:mt-[180px] h-sm:mt-[72px]  -ml-10 bg-white transition-all duration-300 hover:bg-light-gray hover:text-gray-400 hover-shadow-animate'>
+                <div className='relative flex items-center justify-center border rounded-full h-md:mt-[180px] h-sm:mt-[72px]  -ml-20 bg-white transition-all duration-300 hover:bg-light-gray hover:text-gray-400 hover-shadow-animate'>
   <button className='text-black  h-md:text-[30px] sm:text-[24px] h-sm:text-[24px] h-sm:px-[40px] h-sm:py-[55px]  h-md:px-[50px] h-md:py-[65px] font-bellefair'>
     Explore
   </button>

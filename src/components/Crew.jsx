@@ -17,7 +17,7 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
 
   return (
    <>
-    <div className="relative w-screen h-screen">
+    <div className="relative w-screen h-[930px] sm:h-screen">
 
         {/* Mobile Background and Navbar */}
     <div
@@ -30,35 +30,35 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
             <div className='font-barlow text-[28px] text-center  -ml-4 text-white'><span className='text-white/20 mr-2 xl:mr-4'>02</span>
                 <span className='lg:tracking-wider'>MEET YOUR CREW</span></div>
 
-            <div className='flex-col mt-[90px] md:mt-[60px] ml-[28%] md:ml-[23%]      '>
+            <div className='flex-col mt-[90px] md:mt-[60px] mx-auto md:ml-[23%]      '>
              
 
               <div className='space-y-[2px] flex-col  items-center '>
 
                
-                <h1 className='-mt-[34px] xl:mt-1 text-[25px] text-secColor/70 font-bellefair -ml-[120px]  text-center   '>
+                <h1 className='-mt-[10%] xl:mt-1 text-[25px] text-secColor/70 font-bellefair   text-center   '>
                     {selectedResource.title}
                 </h1>
 
-                <h1 className='text-white  text-[32px] font-bellefair text-center -ml-[120px] '>
+                <h1 className='text-white  text-[32px] font-bellefair text-center  '>
                     {selectedResource.name}
                 </h1>
-                <div className='flex -ml-[120px]  justify-center items-center pt-6'>
-                     <p className='  w-[360px] xl:w-[470px] text-lg font-barlow text-center  text-secColor/70  '>
+                <div className=' flex justify-center w-[345px]     pt-6'>
+                     <p className='   xl:w-[470px]  sm:text-lg font-barlow text-center  text-secColor/70  '>
                     {selectedResource.profile}
                 </p>
                 </div>
                
 
-                <div className=' pt-8 flex justify-center -ml-[120px] ' >
+                <div className=' pt-8 flex justify-center -' >
                     <Nav_Crew handleClick={handleClick} selectedResource={selectedResource} />
                 </div>
             </div>
             
-            <div className='relative mx-auto   '>
-                <div className='relative'>
-                    <img src={selectedResource.img} alt="" className=' mt-[85px]  w-[360px] h-[350px] -ml-[19%]'/>
-                    <div className="absolute inset-0 top-[55%] bg-gradient-to-b from-transparent to-primaryColor -ml-[19%]"></div>
+            <div className='absolute bottom-8  mx-auto   '>
+                <div className=' relative '>
+                    <img src={selectedResource.img} alt="" className=' h-md:h-[250px] mt-[85px]  w-[320px] h-[250px] ml-2 '/>
+                    <div className="absolute inset-0 top-[55%] bg-gradient-to-b from-transparent to-primaryColor ml-2 "></div>
                 </div>
               
               </div>
@@ -117,7 +117,7 @@ const Crew = ({isSidebarOpen, toggleSidebar}) => {
             
             <div className='relative mx-auto md:pl-[6px] '>
                 <div className='relative'>
-                    <img src={selectedResource.img} alt="" className=' my-[50px] xl:-mt-[65px]  md:w-[325px] md:h-[250px] sm:w-[300px] sm:h-[240px] sm:ml-[0.15em] md:ml-[8%]' />
+                    <img src={selectedResource.img} alt="" className=' my-[50px] xl:-mt-[65px]   md:w-[325px] md:h-[250px] sm:w-[300px] sm:h-[240px] sm:ml-[0.15em] md:ml-[8%]' />
                     <div className="absolute inset-0 top-[55%] bg-gradient-to-b from-transparent to-primaryColor"></div>
                 </div>
               
