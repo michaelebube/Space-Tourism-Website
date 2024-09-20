@@ -18,6 +18,9 @@
   animation: shadow 2s infinite ;
 }
 
+body {
+  background-color: 'blue';
+}
 
 
 
