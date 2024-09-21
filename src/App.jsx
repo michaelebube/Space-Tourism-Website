@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Destination from './components/Destination'
 import Crew from './components/Crew'
 import Technology from './components/Technology'
+import { AnimatePresence, motion } from "framer-motion";
 
 
 
@@ -15,16 +16,34 @@ const App = () => {
   };
   return (
     <div className='overflow-x-hidden transition-all ease-in-out duration-700 '>
-    
-      <Routes>
-                        <Route path='/' element={<Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
-                         <Route path='/destination' element={<Destination isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
-                        <Route path='/crew' element={<Crew isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
-                        <Route path='/technology' element={<Technology isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />}></Route>
+     <AnimatePresence mode = 'wait'> 
+      <Routes location={location} key={location.pathname}>
+                        <Route path='/' element={<PageTransition>
+                          <Home isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+                          </PageTransition>}></Route>
+                         <Route path='/destination' element={<PageTransition>
+                          <Destination isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+                          </PageTransition>}></Route>
+                        <Route path='/crew' element={<PageTransition>
+                          <Crew isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+                          </PageTransition>}></Route>
+                        <Route path='/technology' element={<PageTransition>
+                            <Technology isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+                          </PageTransition>}></Route>
       </Routes>
-    
+     </AnimatePresence>
     </div>
   )
 }
 
+const PageTransition = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: -50 }} // Initial state when entering
+    animate={{ opacity: 1, y: 0 }}   // Animate to final state
+    exit={{ opacity: 0, y: 50 }}     // Exit animation when leaving
+    transition={{ duration: 0.5 }}   // Customize transition duration
+  >
+    {children}
+  </motion.div>
+);
 export default App
