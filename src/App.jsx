@@ -38,10 +38,10 @@ const App = () => {
 
 const PageTransition = ({ children }) => (
   <motion.div
-    initial={{ opacity: 0, y: -50 }} // Initial state when entering
-    animate={{ opacity: 1, y: 0 }}   // Animate to final state
-    exit={{ opacity: 0, y: 50 }}     // Exit animation when leaving
-    transition={{ duration: 0.5 }}   // Customize transition duration
+    initial={{ opacity: 0, y: -50 }} 
+    animate={{ opacity: 1, y: 0 }}   
+    exit={{ opacity: 0, y: 50 }}     
+    transition={{ duration: 0.5 }}   
   >
     {children}
   </motion.div>
